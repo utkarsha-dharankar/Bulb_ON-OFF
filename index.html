@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON OFF</title>
+</head>
+    <script>
+        function bulbOn(){
+        document.getElementById("bulb").src = "work-in-progress.png" ;
+        document.getElementById("btn-on").className = "btn btn-on" ;
+        document.getElementById("btn-off").className = "btn" ;
+
+        document.querySelector(".card").className = "card card-light";
+        document.querySelector("body").className = " card-light";
+        }
+        function bulbOff(){
+        document.getElementById("bulb").src = "work-in-progress (1).png" ;
+        document.getElementById("btn-off").className ="btn btn-off";
+        document.getElementById("btn-on").className ="btn";
+
+        document.querySelector(".card").className = "card card-dark";
+        document.querySelector("body").className = "body"
+        }
+    </script>
+    <style>
+        body{
+            background-color: #86acac;
+            width: 100%;
+            height: 100%;
+        }
+        .card{
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            display: block;
+            margin-top: 100px;
+        }
+        .bulb-img{
+            width: 150px;
+            display: block;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+        .btn{
+            width: 50px;
+            height: 50px;
+            font-weight: 400;
+            cursor: pointer;
+            border: 0.5px solid black;
+            border-radius: 20px;
+        }
+        .btn-on{
+            background-color: rgb(85, 228, 85);
+            color: white;
+        }
+        .btn-off{
+            background-color: red;
+            color: white;
+        }
+        .card-dark{
+            background-color: #d1e0e0;
+        }
+        .card-light{
+            background-color: #ffffff;
+        }
+    </style>
+<body>
+    <div class="card">
+        <img src="./work-in-progress (1).png" class="bulb-img" id="bulb" alt="">
+        <div class="btn-container">
+            <button class="btn " id="btn-on" onclick="bulbOn()">ON</button>
+            <button class="btn " id="btn-off" onclick="bulbOff()">OFF</button>
+        </div>
+    </div>
+</body>
+</html>
